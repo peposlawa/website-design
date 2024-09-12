@@ -1,0 +1,132 @@
+/* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+jsx+typescript */
+code[class*=language-],
+pre[class*=language-] {
+    color: #e4e4e4;
+    background: 0 0;
+    font-family: 'Consolas';
+    font-size: 14px;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none
+}
+
+pre[class*=language-] {
+    padding: 1.5em;
+    margin: 0.5em 1em;
+    overflow: auto
+}
+
+:not(pre)>code[class*=language-],
+pre[class*=language-] {
+    background: #262626
+}
+
+:not(pre)>code[class*=language-] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal
+}
+
+.token.block-comment,
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
+    color: #747474;
+    font-family: 'Consolas';
+    font-size: 14px;
+}
+
+.token.punctuation {
+    color: #ffffff
+}
+
+.token.attr-name,
+.token.deleted,
+.token.namespace,
+.token.tag {
+    color: #e2777a;
+    font-family: 'Consolas';
+    font-size: 14px;
+}
+
+.token.function-name {
+    color: #6491be;
+    font-family: 'Consolas';
+    font-size: 14px;
+}
+
+.token.boolean,
+.token.function,
+.token.number {
+    color: #ebae1f;
+    font-family: 'Consolas';
+    font-size: 14px;
+}
+
+.token.class-name,
+.token.constant,
+.token.property,
+.token.symbol {
+    color: #ffc549;
+    font-family: 'Consolas';
+    font-size: 14px;
+}
+
+.token.atrule,
+.token.builtin,
+.token.important,
+.token.keyword,
+.token.selector {
+    color: #c94855;
+    font-family: 'Consolas';
+    font-size: 14px;
+}
+
+.token.attr-value,
+.token.char,
+.token.regex,
+.token.string,
+.token.variable {
+    color: #4dd15e;
+    font-family: 'Consolas';
+    font-size: 14px;
+}
+
+.token.entity,
+.token.operator,
+.token.url {
+    color: #e3e3e3;
+    font-family: 'Consolas';
+    font-size: 14px;
+}
+
+.token.bold,
+.token.important {
+    font-weight: 200
+}
+
+.token.italic {
+    font-style: italic
+}
+
+.token.entity {
+    cursor: help
+}
+
+.token.inserted {
+    color: green;
+    font-family: 'Consolas';
+    font-size: 14px;
+}

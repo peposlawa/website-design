@@ -78,13 +78,13 @@ nav ul li a {
     border-radius: 50%;
     border: 1px solid #d4d4d4;
     position: absolute;
-    top: -30px;
-    left: 40%;
+    top: -38px;
+    left: 280px;
     opacity: 0.8;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.159);
     -webkit-filter: grayscale(100%);
     /* Safari 6.0 - 9.0 */
-    filter: grayscale(40%);
+    filter: grayscale(25%);
 }
 
 /* Styling of the top section content */
@@ -92,26 +92,30 @@ nav ul li a {
 .top-content {
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     margin-top: 50px;
     position: relative;
-    background:
-        radial-gradient(circle at 100% 20%, #bab0a463, transparent 30%),
-        linear-gradient(20deg, #bab0a463, #ffffff 30%);
+    /* background:
+        radial-gradient(circle at 100% 20%, #bab0a42d, transparent 30%),
+        linear-gradient(20deg, #bab0a433, #ffffff 30%); */
 }
 
 .top-content h1 {
-    font-size: 40px;
-    margin: 0;
+    font-family: "Playwrite CU";
+    position: absolute;
+    top: -40px;
+    left: -55px;
+    font-size: 50px;
     font-weight: 600;
     color: #333;
+    text-shadow: hsla(0, 0%, 31%, 0.251) 2px 2px 3px;
 }
 
 .top-content p {
+    margin-top: 55px;
     padding: 15px;
     font-size: 16px;
-    margin-top: 20px;
     color: #353535;
     text-align: justify;
     /* font-family: 'Libre Franklin'; */
@@ -123,21 +127,26 @@ nav ul li a {
     color: #353535;
     font-weight: 600;
     float: right;
+    margin-right: -15px;
+    text-shadow: hsla(0, 0%, 31%, 0.251) 2px 2px 3px;
 }
 
 /* Styling of the middle section content */
 
 .first-letter {
-    color: rgb(126, 4, 22);
+    color: #353535;
     float: left;
-    font-family: Georgia;
-    font-size: 70px;
-    line-height: 50px;
-    padding-top: 10px;
-    padding-right: 8px;
+    font-family: 'Georgia';
+    font-size: 50px;
+    line-height: 25px;
+    margin-top: 12px;
+    margin-right: 5px;
+    padding: 1px;
+    text-shadow: hsla(0, 0%, 25%, 0.342) 2px 2px 3px;
 }
 
 .main-content {
+    position: relative;
     padding: 20px;
     text-align: justify;
     background: linear-gradient(to bottom right, #ffffff, #ffffff);
@@ -148,10 +157,23 @@ nav ul li a {
     margin: 60px auto;
 }
 
+.main-content p {
+    margin-top: 55px;
+    padding: 5px 15px;
+    font-size: 16px;
+    color: #353535;
+    text-align: justify;
+}
+
 .content-title {
-    font-size: 36px;
-    margin: 0px 0px 20px 0px;
-    color: #2c2c2c;
+    font-family: "Playwrite CU";
+    position: absolute;
+    top: -40px;
+    left: -55px;
+    font-size: 50px;
+    font-weight: 600;
+    color: #333;
+    text-shadow: hsla(0, 0%, 31%, 0.251) 2px 2px 3px;
 }
 
 /* Styling of the footer */
@@ -164,5 +186,14 @@ nav ul li a {
     background: repeating-linear-gradient(135deg, #f6f6f6 0, #f6f6f6 10%, transparent 0, transparent 50%);
     background-size: 5px 5px;
     background-color: #ffffff;
-    opacity: 0.6
+    opacity: 0.6;
+}
+
+.bottom p {
+    font-size: 14px;
+}
+
+.bottom span {
+    font-family: 'Playwrite CU';
+    font-size: 14px;
 }

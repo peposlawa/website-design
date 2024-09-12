@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Typescript Tutorial</title>
+    <title>Typescript Tutorial for Beginners</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="prism.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,6 +17,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div class="wrapper">
       <header>
@@ -35,7 +37,7 @@
 
       <main class="middle">
         <section class="top-content">
-          <h1>Typescript Tutorial for Beginners</h1>
+          <h1>Typescript Basics</h1>
           <p>
             If you're a JavaScript developer curious about TypeScript, this
             guide is for you! TypeScript adds static typing to JavaScript,
@@ -46,43 +48,49 @@
         </section>
 
         <section class="main-content">
-          <h2 class="content-title">First Steps</h2>
+          <h2 class="content-title">Introduction</h2>
           <p>
-            <span class="first-letter">P</span>orem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec varius ultricies malesuada.
-            Vestibulum et dignissim nunc, quis vestibulum nulla. Mauris sed ante
-            sed neque efficitur faucibus. Nunc a mattis turpis. Curabitur
-            maximus blandit pulvinar. Fusce in odio at quam vulputate gravida at
-            quis mauris. Proin auctor in est vitae lobortis. Fusce fermentum a
-            justo et euismod. Mauris lacinia ligula nec augue volutpat, vitae
-            rhoncus massa pulvinar. Vivamus pretium lacus mi, quis ultricies
-            ipsum tempus quis.<br /><br />
-
-            Pellentesque pharetra mauris lobortis hendrerit sollicitudin. Mauris
-            nec dapibus enim, in egestas nisl. Vivamus pharetra augue eu porta
-            porta. Donec venenatis dignissim consectetur. Etiam vitae magna
-            neque. Donec pulvinar pretium tortor nec lobortis. Ut sit amet nulla
-            nec nisl sagittis tristique ut aliquam ante. Vestibulum aliquam
-            scelerisque mattis. Cras id mauris vitae elit volutpat posuere. Ut
-            pharetra nulla mi, sit amet consequat erat porta ac.<br /><br />
-
-            In at imperdiet sapien. Suspendisse viverra dolor eu metus
-            ullamcorper, in porttitor nulla tempus. Nullam porta vel dui quis
-            tempor. Nam vulputate feugiat ullamcorper. Praesent sagittis purus
-            vel justo varius lobortis. Sed eu diam tristique, venenatis odio in,
-            euismod urna. Cras dui sem, iaculis sit amet ex at, sagittis
-            tincidunt sem. Fusce lacinia vehicula mauris ac dapibus. Duis tempor
-            odio consectetur, pretium ipsum ornare, posuere sapien. Phasellus
-            tristique, nisi quis mollis luctus, ipsum justo sagittis nunc, quis
-            dapibus metus ex in sapien. Ut tristique sit amet velit sed
-            sagittis. Donec condimentum sodales tortor sed imperdiet.
+            <span class="first-letter">T</span>ypeScript is like JavaScript with
+            superpowers! It adds something called static types, which helps you
+            catch errors early, making your code more reliable. One of the big
+            reasons to use TypeScript is that it makes your development smoother
+            with better support in your code editor—think autocompletion and
+            instant error checking. The key differences from JavaScript? You'll
+            start seeing things like type annotations (where you tell TypeScript
+            what kind of data you're working with) and type inference (where it
+            figures that out for you). Plus, you get interfaces, which let you
+            organize your code in a more structured way.<br /><br />
+            Ready to get started? Let's dive in!<br /><br />
+            I'll walk you through examples of various TypeScript types,
+            including primitives, arrays, tuples, unions, enums, interfaces,
+            generics, and more.<br /><br />
+            
+            1. Primitive Types<br /><br />
+            These include string, number, boolean, null,
+            undefined, and symbol.
           </p>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+let firstName: string = "Alice";        // string
+let age: number = 25;                   // number
+let isActive: boolean = true;           // boolean
+let value: null = null;                 // null
+let notDefined: undefined = undefined;  // undefined
+let uniqueId: symbol = Symbol('id');    // symbol
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
         </section>
       </main>
 
       <footer class="bottom">
-        <p>All rights reserved &copy; Paulina Szymkiewicz</p>
+        <p>All rights reserved &copy; <span>Paulina Szymkiewicz</span></p>
       </footer>
     </div>
   </body>
+  <script src="prism.js"></script>
 </html>
