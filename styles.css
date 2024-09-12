@@ -1,3 +1,108 @@
+* {
+    font-family: "Lora", serif;
+    font-optical-sizing: none;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Trebuchet MS';
+    margin: 0;
+    padding: 0;
+}
+
 .wrapper {
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    padding: 20px;
+    text-align: center;
+}
+
+.web-title {
+    font-weight: 800;
+    font-size: 40px;
+    color: #2c2c2c;
+}
+
+.nav-links {
+    margin-left: auto;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-family: 'Libre Franklin';
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+.content {
+    padding: 20px;
+    text-align: justify;
+    background: linear-gradient(to bottom right, #f4f6f8, #e8eaed);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 60px auto;
+}
+
+/* Styling of the footer */
+
+footer {
+    background-color: #839fd1;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Styling of the gradient card */
+
+.card {
+    background: linear-gradient(to bottom right, #A5C8FF, #F5F7FA);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.card h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.arrow-up {
+    font-size: 24px;
+    color: #007BFF;
 }
