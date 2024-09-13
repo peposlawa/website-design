@@ -39,51 +39,332 @@
         <section class="top-content">
           <h1>Typescript Basics</h1>
           <p>
-            If you're a JavaScript developer curious about TypeScript, this
-            guide is for you! TypeScript adds static typing to JavaScript,
-            helping you catch errors early and write more reliable code. In this
-            tutorial, you'll learn how to set up TypeScript, use its key
-            features, and start improving your code today.
-          </p>
-        </section>
-
-        <section class="main-content">
-          <h2 class="content-title">Introduction</h2>
-          <p>
             <span class="first-letter">T</span>ypeScript is like JavaScript with
             superpowers! It adds something called static types, which helps you
             catch errors early, making your code more reliable. One of the big
             reasons to use TypeScript is that it makes your development smoother
-            with better support in your code editor—think autocompletion and
-            instant error checking. The key differences from JavaScript? You'll
-            start seeing things like type annotations (where you tell TypeScript
+            with better support in your code editor — think autocompletion and
+            instant error checking.<br><br>
+            The key differences from JavaScript? You'll start seeing things like type annotations (where you tell TypeScript
             what kind of data you're working with) and type inference (where it
             figures that out for you). Plus, you get interfaces, which let you
             organize your code in a more structured way.<br /><br />
             Ready to get started? Let's dive in!<br /><br />
-            I'll walk you through examples of various TypeScript types,
-            including primitives, arrays, tuples, unions, enums, interfaces,
-            generics, and more.<br /><br />
-            
-            1. Primitive Types<br /><br />
-            These include string, number, boolean, null,
-            undefined, and symbol.
           </p>
+        </section>
+
+        <section class="main-content">
+          <h2 class="content-title">Many Types</h2>
+          <p>
+            <span class="first-letter">I</span>n TypeScript, types refer to the annotations and definitions that help the compiler understand what kinds of values a variable, function, or object can hold. Types are the core feature of TypeScript, as they enforce type safety and help catch errors during development rather than at runtime. This makes the code more reliable and maintainable.<br><br>
+            TypeScript provides various types, including basic primitives, complex object types, custom types, and more.<br><br>
+            Here's a breakdown of different types:
+          </p>
+
+          <div class="featured">
+            <span class="featured-text">1. Primitive Types</span><br /><br />
+            These include string, number, boolean, null, undefined, and symbol.
+          </div>
 
           <!-- Code Block -->
           <div class="code-block">
             <pre>
                 <code class="language-typescript">
-let firstName: string = "Alice";        // string
-let age: number = 25;                   // number
-let isActive: boolean = true;           // boolean
-let value: null = null;                 // null
-let notDefined: undefined = undefined;  // undefined
-let uniqueId: symbol = Symbol('id');    // symbol
+                    let firstName: string = "Alice";        // string
+                    let age: number = 25;                   // number
+                    let isActive: boolean = true;           // boolean
+                    let value: null = null;                 // null
+                    let notDefined: undefined = undefined;  // undefined
+                    let uniqueId: symbol = Symbol('id');    // symbol
 </code>
 </pre>
           </div>
           <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">2. Array Types</span><br /><br />
+            Arrays in TypeScript can be of a specific type or a mix of types.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                    let numberArray: number[] = [1, 2, 3];              // Array of numbers
+                    let stringArray: Array<string> = ["Alice", "Bob"];  // Alternative syntax
+                    let mixedArray: (number | string)[] = [1, "two"];   // Array of numbers and strings
+                  
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">3. Tuple Types</span><br /><br />
+            Tuples allow you to define an array with a fixed number of elements, each with its own type.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                    let person: [string, number] = ["Alice", 25];  // Tuple with a string and a number
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">4. Union Types</span><br /><br />
+Union types allow a variable to be one of multiple types.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                    let id: string | number;
+                    id = "123";  // Valid
+                    id = 123;    // Valid                  
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">5. Enum Types</span><br /><br />
+            Enums allow you to define a set of named constants.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                  enum Color {
+                    Red,
+                    Green,
+                    Blue
+                  }
+
+                  let color: Color = Color.Green;  // 1 (Enum value)                  
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">6. Any and Unknown Types</span><br /><br />
+            'any' disables type checking, while 'unknown' enforces type safety through additional checks.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                    let anything: any = "hello";  // No type checking
+                    anything = 123;               // Allowed
+
+                    let maybeUnknown: unknown = "world";
+                    if (typeof maybeUnknown === "string") {
+                      
+                      // Allowed because type is checked
+                      console.log(maybeUnknown.toUpperCase());}
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">7. Void Type</span><br /><br />
+            The 'void' type is used for functions that don't return a value.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                  function logMessage(message: string): void {
+                    console.log(message);
+                  }                  
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">8. Never Type</span><br /><br />
+            The never type represents values that never occur, such as a function that always throws an error.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                  function throwError(message: string): never {
+                    throw new Error(message);
+                  }                  
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">9. Object Types</span><br /><br />
+            You can use objects to specify a structure and enforce type checks on the properties.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                  let person: { name: string; age: number; isEmployed: boolean } = {
+                    name: "Alice",
+                    age: 30,
+                    isEmployed: true
+                  };                                  
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">10. Interface Types</span><br /><br />
+            Interfaces define the shape of an object and can be used to enforce a consistent structure.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                  interface User {
+                    name: string;
+                    age: number;
+                    isActive: boolean;
+                  }
+                  
+                  let user: User = {
+                    name: "Alice",
+                    age: 25,
+                    isActive: true
+                  };                  
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">11. Type Alias</span><br /><br />
+            Type aliases create custom types to improve readability and reuse.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                  type StringOrNumber = string | number;
+
+                  let idValue: StringOrNumber;
+                  idValue = "abc";   // Valid
+                  idValue = 123;     // Valid                  
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">12. Generics</span><br /><br />
+            Generics allow you to write reusable functions or components that work with different types while maintaining type safety.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                  function identity<T>(value: T): T {
+                    return value;
+                  }
+                  
+                  let result1 = identity<string>("hello");  // T is replaced with string
+                  let result2 = identity<number>(42);       // T is replaced with number                                  
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">13. Readonly Modifier</span><br /><br />
+            The readonly modifier ensures that properties can't be changed after they are initialized.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                  class Car {
+                    readonly model: string;
+                  
+                    constructor(model: string) {
+                      this.model = model;
+                    }
+                  }
+                  
+                  let myCar = new Car("Toyota");
+                  // myCar.model = "Honda"; // Error: Cannot assign to 'model' because it is a read-only property                                   
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">14. Union and Intersection Types</span><br /><br />
+            Union types allow a variable to take on multiple types, while intersection types combine multiple types.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                  // Union type
+                  let myId: number | string;
+                  myId = 101;   // valid
+                  myId = "abc"; // also valid
+                  
+                  // Intersection type
+                  interface Employee {
+                    employeeId: number;
+                  }
+                  
+                  interface Person {
+                    name: string;
+                  }
+                  
+                  type EmployeePerson = Employee & Person;
+                  
+                  let employee: EmployeePerson = {
+                    employeeId: 123,
+                    name: "John"
+                  };                                   
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
+          <div class="featured">
+            <span class="featured-text">15. Type Assertion</span><br /><br />
+            Type assertion allows you to override the inferred type and tell TypeScript what the variable should be.
+          </div>
+
+          <!-- Code Block -->
+          <div class="code-block">
+            <pre>
+                <code class="language-typescript">
+                  let someValue: unknown = "this is a string";
+                  let strLength: number = (someValue as string).length;  // Asserting that someValue is a string                                   
+</code>
+</pre>
+          </div>
+          <!-- Code Block -->
+
         </section>
       </main>
 
