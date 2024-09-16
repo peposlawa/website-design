@@ -1044,3 +1044,36 @@ Prism.languages.clike = {
     return e.length + t;
   }
 })();
+
+// Dark mode toggle button
+
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTopBtn = document.getElementById("backToTopBtn");
+  const darkModeToggle = document.getElementById("darkModeToggle");
+
+  // Back to top button functionality
+  window.addEventListener("scroll", () => {
+    backToTopBtn.classList.toggle("show", window.pageYOffset > 300);
+  });
+
+  backToTopBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Dark mode toggle functionality
+  function setDarkMode(isDark) {
+    document.body.classList.toggle("dark-mode", isDark);
+    localStorage.setItem("darkMode", isDark);
+  }
+
+  // Check for saved user preference
+  const savedDarkMode = localStorage.getItem("darkMode");
+  if (savedDarkMode !== null) {
+    setDarkMode(savedDarkMode === "true");
+  }
+
+  darkModeToggle.addEventListener("click", () => {
+    setDarkMode(!document.body.classList.contains("dark-mode"));
+  });
+});

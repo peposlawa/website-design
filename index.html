@@ -23,12 +23,15 @@
             <li><a href="index.html">Typescript</a></li>
           </ul>
         </nav>
+        <button id="darkModeToggle" aria-label="Toggle dark mode">
+          Dark
+        </button>
       </header>
 
       <div class="content-wrapper">
         <div class="main-column">
           <div class="top-content">
-            <h1>Introduction</h1>
+            <h1 class="content-title">Introduction</h1>
             <p>
               <span class="first-letter">T</span>ypeScript is like JavaScript with
               superpowers! It adds something called static types, which helps you
@@ -354,19 +357,6 @@
     </div>
     
     <button id="backToTopBtn" aria-label="Back to top">↑</button>
-
-    <script>
-      const backToTopBtn = document.getElementById('backToTopBtn');
-    
-      window.addEventListener('scroll', () => {
-        backToTopBtn.classList.toggle('show', window.pageYOffset > 300);
-      });
-    
-      backToTopBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({top: 0, behavior: 'smooth'});
-      });
-    </script>
 
     <script src="prism.js"></script>
   </body>

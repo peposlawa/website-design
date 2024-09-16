@@ -8,7 +8,7 @@
 body,
 html {
     font-family: "Lora", serif;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
     color: #353535;
@@ -59,7 +59,7 @@ nav ul li {
 
 nav ul li a {
     font-family: 'Libre Franklin', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: #333;
     text-decoration: none;
     position: relative;
@@ -120,11 +120,7 @@ nav ul li a:hover::after {
 .type-nav ul li a,
 .function-nav ul li a,
 .class-nav ul li a {
-    font-size: 16px;
-    border-radius: 6px;
-    padding: 5px 10px;
-    line-height: 25px;
-    margin-left: -15px;
+    font-size: 15px;
 }
 
 /* Avatar */
@@ -162,10 +158,11 @@ nav ul li a:hover::after {
     text-shadow: hsla(0, 0%, 31%, 0.251) 2px 2px 3px;
 }
 
-.top-content p {
+.top-content p,
+.main-content p {
     margin-top: 5px;
     padding: 40px;
-    font-size: 16px;
+    font-size: 15px;
     text-align: justify;
 }
 
@@ -194,13 +191,6 @@ nav ul li a:hover::after {
     width: 100%;
     margin-top: 100px;
     padding: 20px;
-}
-
-.main-content p {
-    margin-top: 5px;
-    padding: 40px;
-    font-size: 16px;
-    text-align: justify;
 }
 
 .featured-text {
@@ -238,7 +228,7 @@ nav ul li a:hover::after {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #000000a0;
+    background-color: #0c0c0ca0;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -286,4 +276,93 @@ nav ul li a:hover::after {
     width: 100%;
     margin-top: 50px;
     position: relative;
+}
+
+/* Existing styles... */
+
+/* Dark mode toggle button */
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1e1d1d;
+    color: #e0e0e0;
+    font-family: 'Libre Franklin';
+}
+
+body.dark-mode header {
+    border-bottom-color: #444;
+}
+
+body.dark-mode .web-title a {
+    color: #cbcbcb;
+}
+
+body.dark-mode nav ul li a {
+    color: #cbcbcb;
+}
+
+body.dark-mode .top-content,
+body.dark-mode .main-content,
+body.dark-mode .type-nav,
+body.dark-mode .function-nav,
+body.dark-mode .class-nav {
+    background-color: #1e1d1d;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    color: #cbcbcb;
+}
+
+body.dark-mode .content-title,
+body.dark-mode .top-content h1 {
+    color: #cbcbcb;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.758);
+}
+
+body.dark-mode .bottom {
+    background-color: #2a2a2a;
+    border-top-color: #444;
+}
+
+body.dark-mode pre[class*=language-] {
+    background: #3c3c3c;
+}
+
+body.dark-mode code[class*=language-] {
+    color: #cbcbcb;
+}
+
+body.dark-mode #darkModeToggle {
+    color: #cbcbcb;
+}
+
+body.dark-mode .type-nav ul li a,
+body.dark-mode .function-nav ul li a,
+body.dark-mode .class-nav ul li a {
+    color: #cbcbcb;
+}
+
+body.dark-mode .type-nav ul li a:hover::after,
+body.dark-mode .function-nav ul li a:hover::after,
+body.dark-mode .class-nav ul li a:hover::after {
+    background-color: #cbcbcb;
+}
+
+/* Dark mode styles for top navigation */
+body.dark-mode nav ul li a {
+    color: #cbcbcb;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #ffffff;
+}
+
+body.dark-mode nav ul li a::after {
+    background-color: #cbcbcb;
 }
