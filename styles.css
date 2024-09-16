@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     font-family: "Lora", serif;
     font-size: 17px;
     font-weight: 400;
@@ -41,6 +42,7 @@ header {
     margin-left: 30px;
 }
 
+/* Top navigation */
 .nav-links {
     margin-left: auto;
 }
@@ -48,6 +50,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    gap: 20px;
 }
 
 nav ul li {
@@ -55,18 +58,73 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'Libre Franklin';
-    font-size: 18px;
-    color: #4f4f4f;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 16px;
+    color: #333;
     text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-/* Main content */
-.middle {
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Navigation styles */
+.type-nav,
+.function-nav,
+.class-nav {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    /* position: static; */
+    left: auto;
+    top: 50px;
+    position: relative;
+    width: 250px;
+}
+
+.type-nav h2,
+.function-nav h2,
+.class-nav h2 {
+    font-family: "Libre Franklin";
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: hsla(0, 0%, 31%, 0.251) 2px 2px 3px;
+}
+
+.type-nav ul,
+.function-nav ul,
+.class-nav ul {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
-    margin: auto;
+}
+
+.type-nav ul li a,
+.function-nav ul li a,
+.class-nav ul li a {
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 5px 10px;
+    line-height: 25px;
+    margin-left: -15px;
 }
 
 /* Avatar */
@@ -89,11 +147,11 @@ nav ul li a {
     padding: 20px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    margin-top: 50px;
     position: relative;
 }
 
-.top-content h1 {
+.top-content h1,
+.content-title {
     font-family: "Playwrite CU";
     position: absolute;
     top: -40px;
@@ -105,8 +163,8 @@ nav ul li a {
 }
 
 .top-content p {
-    margin-top: 55px;
-    padding: 15px;
+    margin-top: 5px;
+    padding: 40px;
     font-size: 16px;
     text-align: justify;
 }
@@ -120,80 +178,29 @@ nav ul li a {
     text-shadow: hsla(0, 0%, 31%, 0.251) 2px 2px 3px;
 }
 
-/* Navigation styles */
-.type-nav, .function-nav {
-    padding: inherit;
-    position: absolute;
-    left: 650px;
-    width: 250px;
-    border-radius: inherit;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.type-nav { top: 0; }
-.function-nav { top: 500px; }
-
-.type-nav h2, .function-nav h2 {
-    font-family: "Lora";
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-shadow: hsla(0, 0%, 31%, 0.251) 2px 2px 3px;
-}
-
-.type-nav ul, .function-nav ul {
+/* Main content styles */
+.middle {
     display: flex;
     flex-direction: column;
-}
-
-.type-nav ul li a, .function-nav ul li a {
-    font-size: 16px;
-    border-radius: 6px;
-    padding: 5px 10px;
-    line-height: 25px;
-    margin-left: -15px;
-}
-
-.type-nav ul li a:hover, .function-nav ul li a:hover {
-    background-color: #e2e2e2ae;
-}
-
-/* Main content styles */
-.first-letter {
-    float: left;
-    font-family: 'Georgia';
-    font-size: 60px;
-    line-height: 1em;
-    margin-right: 8px;
-    text-shadow: hsla(0, 0%, 25%, 0.342) 2px 2px 3px;
+    max-width: 600px;
+    margin: auto;
 }
 
 .main-content {
     position: relative;
-    padding: 20px;
     text-align: justify;
-    background: linear-gradient(to bottom right, #ffffff, #ffffff);
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    margin: 60px auto;
+    margin-top: 100px;
+    padding: 20px;
 }
 
 .main-content p {
-    margin-top: 55px;
-    padding: 5px 15px;
+    margin-top: 5px;
+    padding: 40px;
     font-size: 16px;
-}
-
-.content-title {
-    font-family: "Playwrite CU";
-    position: absolute;
-    top: -40px;
-    left: -55px;
-    font-size: 50px;
-    font-weight: 600;
-    color: #333;
-    text-shadow: hsla(0, 0%, 31%, 0.251) 2px 2px 3px;
+    text-align: justify;
 }
 
 .featured-text {
@@ -250,4 +257,33 @@ nav ul li a {
 
 #backToTopBtn.show {
     opacity: 1;
+}
+
+/* Main content layout */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.main-column {
+    flex: 1;
+    max-width: 600px;
+}
+
+.nav-column {
+    width: 250px;
+    margin-left: 50px;
+}
+
+/* Adjust top-content */
+.top-content {
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
 }
