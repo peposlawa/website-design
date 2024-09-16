@@ -1,81 +1,67 @@
+/* Reset and base styles */
 * {
-    font-family: "Lora", serif;
-    font-size: 17px;
-    font-optical-sizing: none;
-    font-weight: 400;
-    font-style: normal;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+body, html {
+    font-family: "Lora", serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #353535;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
+/* Layout */
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    overflow-x: hidden;
+    min-height: 100vh;
 }
 
-/* Styling of the header */
-
+/* Header styles */
 header {
     display: flex;
     align-items: baseline;
     padding: 20px;
-    text-align: center;
-    border-bottom: #eceaea 1px solid;
+    border-bottom: 1px solid #eceaea;
 }
 
 .web-title a {
-    text-decoration: none;
-    color: #2c2c2c;
-    font-weight: 800;
     font-family: "Playwrite CU";
     font-size: 30px;
+    font-weight: 800;
+    color: #2c2c2c;
+    text-decoration: none;
     margin-left: 30px;
 }
-
-/* Styling of the navigation bar */
 
 .nav-links {
     margin-left: auto;
 }
 
-
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
+    font-family: 'Libre Franklin';
+    font-size: 18px;
     color: #4f4f4f;
     text-decoration: none;
-    font-size: 18px;
-    font-family: 'Libre Franklin';
 }
 
-/* Styling of the main content */
-
+/* Main content */
 .middle {
     display: flex;
     flex-direction: column;
@@ -83,8 +69,7 @@ nav ul li a {
     margin: auto;
 }
 
-/* Styling of the avatar */
-
+/* Avatar */
 .avatar {
     width: 140px;
     height: 140px;
@@ -95,12 +80,10 @@ nav ul li a {
     left: 280px;
     opacity: 0.8;
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.159);
-    -webkit-filter: grayscale(100%);
     filter: grayscale(25%);
 }
 
-/* Styling of the top section content */
-
+/* Top content */
 .top-content {
     border-radius: 12px;
     padding: 20px;
@@ -108,9 +91,6 @@ nav ul li a {
     width: 100%;
     margin-top: 50px;
     position: relative;
-    /* background:
-        radial-gradient(circle at 100% 20%, #bab0a42d, transparent 30%),
-        linear-gradient(20deg, #bab0a433, #ffffff 30%); */
 }
 
 .top-content h1 {
@@ -128,65 +108,58 @@ nav ul li a {
     margin-top: 55px;
     padding: 15px;
     font-size: 16px;
-    color: #353535;
     text-align: justify;
-    position: relative;
 }
 
 .enjoy {
     font-family: "Playwrite CU";
     font-size: 28px;
-    color: #353535;
     font-weight: 600;
     float: right;
     margin-right: -15px;
     text-shadow: hsla(0, 0%, 31%, 0.251) 2px 2px 3px;
 }
 
-/* Styling of the navigation in the middle section */
-
-.type-nav {
+/* Navigation styles */
+.type-nav, .function-nav {
     padding: inherit;
     position: absolute;
-    top: 0px;
     left: 650px;
     width: 250px;
     border-radius: inherit;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.type-nav h2 {
+.type-nav { top: 0; }
+.function-nav { top: 500px; }
+
+.type-nav h2, .function-nav h2 {
     font-family: "Lora";
     font-size: 25px;
-    color: #353535;
     font-weight: 600;
     margin-bottom: 20px;
     text-shadow: hsla(0, 0%, 31%, 0.251) 2px 2px 3px;
 }
 
-.type-nav ul {
+.type-nav ul, .function-nav ul {
     display: flex;
     flex-direction: column;
 }
 
-.type-nav ul li a {
-    color: #393939;
+.type-nav ul li a, .function-nav ul li a {
     font-size: 16px;
     border-radius: 6px;
     padding: 5px 10px;
     line-height: 25px;
     margin-left: -15px;
-    font-family: inherit;
 }
 
-.type-nav ul li a:hover {
+.type-nav ul li a:hover, .function-nav ul li a:hover {
     background-color: #e2e2e2ae;
 }
 
-/* Styling of the middle section content */
-
+/* Main content styles */
 .first-letter {
-    color: #353535;
     float: left;
     font-family: 'Georgia';
     font-size: 60px;
@@ -201,7 +174,6 @@ nav ul li a {
     text-align: justify;
     background: linear-gradient(to bottom right, #ffffff, #ffffff);
     border-radius: 12px;
-    padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     margin: 60px auto;
@@ -211,8 +183,6 @@ nav ul li a {
     margin-top: 55px;
     padding: 5px 15px;
     font-size: 16px;
-    color: #353535;
-    text-align: justify;
 }
 
 .content-title {
@@ -235,13 +205,12 @@ nav ul li a {
     color: inherit;
 }
 
-/* Styling of the footer */
-
+/* Footer styles */
 .bottom {
     padding: 50px;
     text-align: center;
     width: 100%;
-    border-top: #eceaea 1px solid;
+    border-top: 1px solid #eceaea;
     background: repeating-linear-gradient(135deg, #f6f6f6 0, #f6f6f6 10%, transparent 0, transparent 50%);
     background-size: 5px 5px;
     background-color: #ffffff;
@@ -255,4 +224,30 @@ nav ul li a {
 .bottom span {
     font-family: 'Playwrite CU';
     font-size: 14px;
+}
+
+/* Back to top button */
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000000a0;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#backToTopBtn:hover {
+    background-color: #555;
+}
+
+#backToTopBtn.show {
+    opacity: 1;
 }

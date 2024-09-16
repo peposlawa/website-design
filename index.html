@@ -76,6 +76,31 @@
               </ul>
             </nav>
 
+            <nav class="function-nav">
+              <h2>Functions</h2>
+              <ul>
+                <li><a href="#function-types">Function Types</a></li>
+                <li><a href="#optional-parameters">Optional Parameters</a></li>
+                <li><a href="#default-parameters">Default Parameters</a></li>
+                <li><a href="#rest-parameters">Rest Parameters</a></li>
+                <li><a href="#overloaded-functions">Overloaded Functions</a></li>
+                <li><a href="#arrow-functions">Arrow Functions</a></li>
+                <li><a href="#this-parameter">This Parameter</a></li>
+              </ul>
+            </nav>
+
+            <nav class="class-nav">
+              <h2>Classes</h2>
+              <ul>
+                <li><a href="#class-definition">Class Definition</a></li>
+                <li><a href="#inheritance">Inheritance</a></li>
+                <li><a href="#access-modifiers">Access Modifiers</a></li>
+                <li><a href="#static-members">Static Members</a></li>
+                <li><a href="#generics-in-classes">Generics in Classes</a></li>
+                <li><a href="#interfaces-with-classes">Interfaces with Classes</a></li>
+              </ul>
+            </nav>
+
 
         </section>
 
@@ -398,6 +423,37 @@
         <p>All rights reserved &copy; <span>Paulina Szymkiewicz</span></p>
       </footer>
     </div>
+    
+    <button id="backToTopBtn" aria-label="Back to top">↑</button>
+
+    <script>
+      const backToTopBtn = document.getElementById('backToTopBtn');
+    
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+    
+      backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    
+      // Fallback for browsers that don't support smooth scrolling
+      if (typeof window.scrollTo !== 'function') {
+        backToTopBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.scrollTo(0, 0);
+        });
+      }
+    </script>
+
   </body>
   <script src="prism.js"></script>
 </html>
